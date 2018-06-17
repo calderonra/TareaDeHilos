@@ -65,7 +65,9 @@ public class ventana extends JFrame {
         reiniciar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-
+                for(int i=0;i<3;i++){
+                    labels[i].setLocation(10,(i*220)+10);
+                }
             }
 
         });
@@ -93,7 +95,7 @@ public class ventana extends JFrame {
                         int minuto = c.get(Calendar.MINUTE);
                         int segundos = c.get(Calendar.SECOND);
                         System.out.println();
-                        reloj.setText("Hora: " + hora + "Minutos: " + minuto + "Segundos: " + segundos);
+                        reloj.setText("Hora: " + hora + " Minutos: " + minuto + " Segundos: " + segundos);
                         sleep(1000);
                     }
                 } catch (InterruptedException ex) {
